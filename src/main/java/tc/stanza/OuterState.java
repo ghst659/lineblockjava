@@ -5,7 +5,7 @@ import tc.fsm.ProcessResult;
 import java.util.List;
 
 class OuterState extends ParsingState {
-    public OuterState(ParseBuffer buffer) {
+    OuterState(ParseBuffer buffer) {
         super(buffer);
     }
     @Override
@@ -15,6 +15,6 @@ class OuterState extends ParsingState {
             this.sharedBuffer.add(line);
             target = classTag(InnerState.class);
         }
-        return new ProcessResult<List<String>>(target, null);
+        return new ProcessResult<>(target, null);
     }
 }

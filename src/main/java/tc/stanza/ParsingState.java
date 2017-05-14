@@ -7,7 +7,6 @@ import java.util.List;
 abstract class ParsingState implements State<String, List<String>> {
     protected ParseBuffer sharedBuffer = null;
     protected ParsingState(ParseBuffer buffer) {
-        super();
         this.sharedBuffer = buffer;
     }
     protected static String classTag(Class cls) {
